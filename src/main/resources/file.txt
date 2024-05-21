@@ -1,0 +1,46 @@
+What is Forging?
+Forging is a manufacturing method in which metals are formed into different shapes using compressive forces, such as hammering or pressing. Metal is forged in various ways, including drop, press, and roll forging.
+
+Other manufacturing methods, such as metalcasting, can also be used to shape metals. Casting is best for jobs where accuracy is critical. Each has pros and cons, but metal forging is ideal for creating a more durable part because it is more tightly pressed into its final shape, closing any cracks or cavities. Forging also gives the welder more control over the form of the final product.
+
+A Brief History of Metal Forging
+Traditionally, people with less familiarity with metal forging may imagine a blacksmith hammering on a sword when they hear the word “forging,” as that’s how it’s generally portrayed in the media. They aren’t far off base, either.
+
+Metal forging has been around for thousands of years. In ancient Mesopotamia (4000 B.C.), people used rocks to shape copper and iron into tools, weapons, and jewelry. Centuries later, around 1000 B.C.,  metalworking spread worldwide. The term “blacksmith” was coined to describe those who forged metal. They mainly worked with iron, using hammers to shape it into useful objects.
+
+Metalworking had an impact on the documentation of history itself. The Stone Age, Bronze Age, and Iron Age were all named after the materials we used during those times.
+
+What is Forged Metal Used for?
+While metal forging can still be used to make swords, we usually use it to make things like aircraft parts, screws, bolts, and chisels. Forging can also make larger objects weighing hundreds of thousands of pounds.
+
+Compared to cast metals, forged metal is significantly more durable. Forged objects are extraordinarily durable and capable of supporting thousands of pounds. Forged metals can also handle more wear and tear than cast objects, making them ideal for heavy-duty or harsh environments, such as foundries or construction.
+
+Depending on the application, many different metals can be used in forging. A few of the more common metals utilized in forging include:
+
+Aluminum
+Copper
+Carbon/Alloy/Stainless Steel
+Titanium
+Brass
+
+
+There is no “best” metal when it comes to forging. It all depends on your needs and the application of the forged metal. For example, forged aluminum allows for more design flexibility, but steel is more affordable.
+
+What are the Different Types of Forging?
+Drop Forging
+Like the ancient forging methods, one of the most common forging methods involves dropping a heavy hammer on an anvil to shape metal. In the case of drop forging, two sides of a die are attached to a hammer and anvil, respectively. The upper die mold is dropped (“hammered”) onto a heated piece of molten metal on a lower die mold. The hammering of the die shapes the molten metal into the desired shape.
+
+Open-Die Forging
+Open-die forging is a type of drop forging. The two sides of the die are not fully pressed together, leaving a small opening. After removing it from the die, a second piece of machinery is needed to refine the molten metal. This method results in stronger finalized products but requires more labor.
+
+Closed-Die (Impression Die) Forging
+Closed-die forging, like open-die forging, is a type of drop forging. However, in this case, the two ends of the die fully enclose the metal within their mold under high pressure, leaving no openings. Closed-die forging is suitable for creating accurate molds for critical parts.
+
+Roll Forging
+Roll forging utilizes two cylindrical rolling pieces of equipment with hollowed-out moldings to shape forged metal. Typically, a heated metal “bar” is inserted between the two rollers and pushed through them as they roll. The metal is shaped by the mold, resulting in the final object.
+
+Upset Forging
+A metal bar is held in place by holding one end with a tool. The opposite end is then heated up. When the heated end reaches the desired temperature for ideal malleability, it is pressed down to give it a “flat” head. This method of forging is often used to create items like screws.
+
+Hot and Cold Forging
+Hot forging involves heating the metal above its crystallization temperature to make it more malleable. Cold forging is done slightly above room temperature. Metal is placed between two dies, which are pounded together. This friction raises their temperature to around 450 degrees Fahrenheit until they assume their desired shape. To learn more about the differences between hot and cold forging, check out this article that dives deeper into the differences and benefits.
