@@ -1,0 +1,22 @@
+server:
+  port: 8088 #ovveride in second instance with 8089
+  servlet:
+    session:
+      cookie:
+        same-site: lax
+spring:
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/ollamachat
+    username: ollamachat
+    password: ollamachat
+    table: vector
+  flyway:
+    enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+pl.marcinzygmunt:
+  ollama-host: localhost
+  ollama-port: 11434
+  ollamaLanguageModel: "llama3:latest" # try "mistral", "llama2", "codellama", "phi" or "tinyllama"
+  storage-type: inMemory #inMemory #pgsql with pgVector

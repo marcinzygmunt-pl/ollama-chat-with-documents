@@ -4,17 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28463924-8475-463a-86d5-b4d2107d858c" name="Changes" comment="">
+    <list default="true" id="28463924-8475-463a-86d5-b4d2107d858c" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/configuration/AppConfigurationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/ChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/UploadResourceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/embedings/PgVectorEmbedding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/model/ChatRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/ChatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/DocumentUploadService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/EmbeddingStoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/OllamaModelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/UploadedResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/OllamaChatWithText.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -62,6 +81,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.OllamaChatWithText.executor": "Debug",
     "Docker.docker.ollama-server: Compose Deployment.executor": "Run",
     "Docker.docker.ollama-webui: Compose Deployment.executor": "Run",
     "Docker.docker: Compose Deployment.executor": "Run",
@@ -76,9 +96,9 @@
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.marcinzygmunt.Main" />
+  <component name="RunManager" selected="Application.OllamaChatWithText">
+    <configuration name="OllamaChatWithText" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.marcinzygmunt.OllamaChatWithText" />
       <module name="ollama-chat-with-pdf" />
       <extension name="coverage">
         <pattern>
@@ -130,9 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Docker.docker: Compose Deployment" />
+        <item itemvalue="Application.OllamaChatWithText" />
         <item itemvalue="Docker.docker.ollama-webui: Compose Deployment" />
+        <item itemvalue="Docker.docker: Compose Deployment" />
         <item itemvalue="Docker.docker.ollama-server: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -153,20 +173,28 @@
       <option name="presentableId" value="Default" />
       <updated>1716229064413</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1716286217144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716286217144</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.jdks/openjdk-21.0.2/lib/src.zip!/java.base/java/nio/file/Files.java</url>
-          <line>2356</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.jdks/openjdk-21.0.2/lib/src.zip!/java.base/java/nio/file/Files.java</url>
-          <line>2358</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/ChatController.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
