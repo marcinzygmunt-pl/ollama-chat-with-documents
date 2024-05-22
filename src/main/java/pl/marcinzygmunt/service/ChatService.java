@@ -5,18 +5,20 @@ import dev.langchain4j.retriever.EmbeddingStoreRetriever;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StopWatch;
+import pl.marcinzygmunt.configuration.OllamaModelConfiguration;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
 public class ChatService {
 
-    private final OllamaModelService ollamaModelService;
+    private final OllamaModelConfiguration ollamaModel;
     private final EmbeddingStoreService embeddingStoreService;
 
     private ConversationalRetrievalChain getConversationalRetrievalChain() {
         return ConversationalRetrievalChain.builder()
-                .chatLanguageModel(ollamaModelService.getOllamaModel())
+                .chatLanguageModel(ollamaModel.ollamaModel())
                 .retriever(EmbeddingStoreRetriever.from(embeddingStoreService.getEmbeddingStore(), embeddingStoreService.getEmbeddingModel()))
                 // .chatMemory() // you can override default chat memory
                 // .promptTemplate() // you can override default prompt template
@@ -25,6 +27,11 @@ public class ChatService {
 
     public String execute(String question) {
         log.info("Execute request: {}",question);
-        return getConversationalRetrievalChain().execute(question);
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+        String answer = getConversationalRetrievalChain().execute(question);
+        stopWatch.stop();
+        log.info("Answer: {} in {} ms", answer, stopWatch.getTotalTimeMillis());
+        return answer;
     }
 }

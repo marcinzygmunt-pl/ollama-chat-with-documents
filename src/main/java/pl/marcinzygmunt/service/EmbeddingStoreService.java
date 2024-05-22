@@ -9,30 +9,32 @@ import dev.langchain4j.store.embedding.EmbeddingStoreIngestor;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import pl.marcinzygmunt.configuration.AppConfigurationProperties;
-import pl.marcinzygmunt.embedings.PgVectorEmbedding;
 
 @RequiredArgsConstructor
 @Service
 public class EmbeddingStoreService {
 
-    private final PgVectorEmbedding pgVectorEmbedding;
     private final AppConfigurationProperties appConfigurationProperties;
     @Getter
     private final EmbeddingModel embeddingModel = new AllMiniLmL6V2EmbeddingModel();
 
+    private final EmbeddingStore<TextSegment> pgVectorEmbeddingStore;
+
+     private final InMemoryEmbeddingStore<TextSegment> inMemoryEmbeddingStore = new InMemoryEmbeddingStore<>();
+
     public EmbeddingStore<TextSegment> getEmbeddingStore() {
         if (appConfigurationProperties.storageType().equals("inMemory")) {
-            return new InMemoryEmbeddingStore<>();
+            return inMemoryEmbeddingStore;
         } else {
-            return pgVectorEmbedding.buildEmbeddingStore();
+            return pgVectorEmbeddingStore;
         }
 
     }
 
-
-    public EmbeddingStoreIngestor getEmbeddingStoreIngestor() {
+    public EmbeddingStoreIngestor getStoreIngestor() {
 
         return EmbeddingStoreIngestor.builder()
                 .documentSplitter(DocumentSplitters.recursive(300, 0))
@@ -40,6 +42,5 @@ public class EmbeddingStoreService {
                 .embeddingStore(getEmbeddingStore())
                 .build();
     }
-
 
 }

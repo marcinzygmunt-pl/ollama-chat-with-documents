@@ -13,14 +13,14 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class DocumentUploadService {
 
-    private final EmbeddingStoreService embeddingStoreService;
+   private final EmbeddingStoreService embeddingStoreService;
 
     private Document customDocumentLoader(Resource resource, DocumentParser documentParser) {
         return DocumentLoader.load(UploadedResource.from(resource), documentParser);
     }
 
     public void uploadDocumentToStorage(Resource resource) {
-        EmbeddingStoreIngestor ingestor = embeddingStoreService.getEmbeddingStoreIngestor();
+        EmbeddingStoreIngestor ingestor = embeddingStoreService.getStoreIngestor();
         Document document = customDocumentLoader(resource, new TextDocumentParser());
         ingestor.ingest(document);
     }

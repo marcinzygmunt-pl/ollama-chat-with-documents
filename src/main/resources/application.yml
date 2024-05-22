@@ -5,18 +5,16 @@ server:
       cookie:
         same-site: lax
 spring:
-  datasource:
-    url:  jdbc:postgresql://localhost:5432/ollamachat
-    username: ollamachat
-    password: ollamachat
-    table: vector
-  flyway:
-    enabled: true
-  jpa:
-    hibernate:
-      ddl-auto: update
+  jmx: enabled
 pl.marcinzygmunt:
+  pgvector:
+    host: localhost
+    port: 5433
+    db: vectordb
+    table: embeddings
+    username: testuser
+    password: testpwd
   ollama-host: localhost
   ollama-port: 11434
-  ollamaLanguageModel: "llama3:latest" # try "mistral", "llama2", "codellama", "phi" or "tinyllama"
+  ollama-language-model: "llama3:latest" # try "mistral", "llama2", "codellama", "phi" or "tinyllama"
   storage-type: inMemory #inMemory #pgsql with pgVector

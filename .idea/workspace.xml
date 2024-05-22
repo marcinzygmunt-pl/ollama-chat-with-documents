@@ -4,24 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28463924-8475-463a-86d5-b4d2107d858c" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/configuration/AppConfigurationProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/UploadResourceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/embedings/PgVectorEmbedding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/model/ChatRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/ChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/DocumentUploadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/EmbeddingStoreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/OllamaModelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/UploadedResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="28463924-8475-463a-86d5-b4d2107d858c" name="Changes" comment="rest application">
+      <change afterPath="$PROJECT_DIR$/docker/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/configuration/OllamaModelConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/OllamaChatWithText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/UploadResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/UploadResourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/embedings/PgVectorEmbedding.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/configuration/PgVectorEmbeddingConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/ChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/DocumentUploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/DocumentUploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/EmbeddingStoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/EmbeddingStoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/OllamaModelService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/file.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +28,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,8 +50,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="restappmodel" />
+                    <option name="lastUsedInstant" value="1716324799" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1716286200" />
+                    <option name="lastUsedInstant" value="1716324616" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -78,24 +79,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OllamaChatWithText.executor&quot;: &quot;Debug&quot;,
-    &quot;Docker.docker.ollama-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker.ollama-webui: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.OllamaChatWithText.executor": "Debug",
+    "Docker.docker.db: Compose Deployment.executor": "Run",
+    "Docker.docker.ollama-server: Compose Deployment.executor": "Run",
+    "Docker.docker.ollama-webui: Compose Deployment.executor": "Run",
+    "Docker.docker: Compose Deployment.executor": "Run",
+    "JUnit.PgVectorEmbeddingConfigurationTest.parseDatabaseUrl.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "restappmodel",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="pl.marcinzygmunt.configuration" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.OllamaChatWithText">
     <configuration name="OllamaChatWithText" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.marcinzygmunt.OllamaChatWithText" />
@@ -106,6 +119,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PgVectorEmbeddingConfigurationTest.parseDatabaseUrl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ollama-chat-with-pdf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.marcinzygmunt.configuration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.marcinzygmunt.configuration" />
+      <option name="MAIN_CLASS_NAME" value="pl.marcinzygmunt.configuration.PgVectorEmbeddingConfigurationTest" />
+      <option name="METHOD_NAME" value="parseDatabaseUrl" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,12 +153,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker.ollama-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="ollama-server" />
+              <option value="db" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker/docker-compose.yml" />
@@ -153,15 +182,17 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.OllamaChatWithText" />
-        <item itemvalue="Docker.docker.ollama-webui: Compose Deployment" />
+        <item itemvalue="Docker.docker.db: Compose Deployment" />
         <item itemvalue="Docker.docker: Compose Deployment" />
-        <item itemvalue="Docker.docker.ollama-server: Compose Deployment" />
+        <item itemvalue="JUnit.PgVectorEmbeddingConfigurationTest.parseDatabaseUrl" />
+        <item itemvalue="Docker.docker.ollama-webui: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -194,9 +225,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/controller/ChatController.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/ChatService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pl/marcinzygmunt/service/EmbeddingStoreService.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

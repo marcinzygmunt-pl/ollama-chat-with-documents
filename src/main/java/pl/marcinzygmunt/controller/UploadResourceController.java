@@ -15,7 +15,7 @@ public class UploadResourceController {
     private final DocumentUploadService documentUploadService;
 
     @PostMapping("/upload")
-    public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) throws Exception {
+    public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
        documentUploadService.uploadDocumentToStorage(file.getResource());
        return ResponseEntity.ok("File Uploaded !");
     }

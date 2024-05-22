@@ -9,20 +9,19 @@ services:
     restart: unless-stopped
     # environment:
     #   - gpus=all
-
-  postgres:
-    container_name: postgres_container
-    image: postgres
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
-      PGDATA: /data/postgres
-    volumes:
-      - postgres:/data/postgres
+  db:
+    hostname: db
+    image: ankane/pgvector
     ports:
-      - "5432:5432"
-    restart: unless-stopped
-
+      - 5433:5432
+    restart: always
+    environment:
+      - POSTGRES_DB=vectordb
+      - POSTGRES_USER=testuser
+      - POSTGRES_PASSWORD=testpwd
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
   ollama-webui:
     image: ghcr.io/ollama-webui/ollama-webui:main
