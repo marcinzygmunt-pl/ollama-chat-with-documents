@@ -1,4 +1,4 @@
-package pl.marcinzygmunt.configuration;
+package pl.marcinzygmunt.configuration.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

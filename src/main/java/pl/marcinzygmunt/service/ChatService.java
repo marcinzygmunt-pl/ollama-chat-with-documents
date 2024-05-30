@@ -1,6 +1,7 @@
 package pl.marcinzygmunt.service;
 
 import dev.langchain4j.chain.ConversationalRetrievalChain;
+import dev.langchain4j.rag.content.retriever.EmbeddingStoreContentRetriever;
 import dev.langchain4j.retriever.EmbeddingStoreRetriever;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,7 +20,7 @@ public class ChatService {
     private ConversationalRetrievalChain getConversationalRetrievalChain() {
         return ConversationalRetrievalChain.builder()
                 .chatLanguageModel(ollamaModel.ollamaModel())
-                .retriever(EmbeddingStoreRetriever.from(embeddingStoreService.getEmbeddingStore(), embeddingStoreService.getEmbeddingModel()))
+                .contentRetriever(new EmbeddingStoreContentRetriever(embeddingStoreService.getEmbeddingStore(), embeddingStoreService.getEmbeddingModel()))
                 // .chatMemory() // you can override default chat memory
                 // .promptTemplate() // you can override default prompt template
                 .build();
