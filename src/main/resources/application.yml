@@ -17,4 +17,4 @@ pl.marcinzygmunt:
   ollama-host: localhost
   ollama-port: 11434
   ollama-language-model: "llama3:latest" # try "mistral", "llama2", "codellama", "phi" or "tinyllama"
-  storage-type: pgVector #inMemory #pgsql with pgVector
+  storage-type: inMemory #inMemory #pgsql with pgVector
