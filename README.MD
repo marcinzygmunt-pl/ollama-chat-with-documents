@@ -1,7 +1,6 @@
-<h1 align="center" id="title">Chat with your documents using Ollama</h1>
+<h1 align="center" id="title"> RAG AI Ollama</h1>
 
-<p id="description">Sample AI Assistant to chat with your documents. Documents could be stored in inMemory or pgVector repository.</p>
-
+<p id="description">Sample AI Assistant to prompt your documents. Documents could be stored in inMemory or pgVector repository.</p>
 
 
 <h2>🧐 Features</h2>
